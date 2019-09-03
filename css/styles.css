@@ -9,6 +9,13 @@
 }
 
 :root {
+    --pinapple: #514663;
+    --mummy-tomb: #808D8E;
+    --old-lavender: #766C7F;
+    --lavender-purple: #947EB0;
+    --blue-bell: #A3A5C3;
+    --pastel-blue: #A9D2D5;
+    --columbis-blue: #C3DFE0;
     --old-gold: #B8B42D;
     --olive-drab: #697A21;
     --wild-blue: #96ADC8;
@@ -101,6 +108,71 @@ html {
     top: 0;
 }
 
+
+/* Circle */
+
+section {
+    background-color: var(--wild-blue);
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 40rem;
+    height: 40rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: .2rem solid var(--tuscan-red);
+    z-index: -5;
+}
+
+.line {
+    width: 50%;
+    height: 0.2rem;
+    background: var(--brown-yellow);
+    position: absolute;
+    top: calc(50% - 1px);
+    transform-origin: right;
+    animation: animate 20s linear infinite;
+}
+
+.line:before {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background: var(--lavender-purple);
+    border-radius: 50%;
+    top: -1rem;
+    left: -11rem;
+    border: .2rem solid var(--tea-green);
+}
+
+.line:after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background: var(--lavender-purple);
+    border-radius: 50%;
+    top: -1rem;
+    left: -11rem;
+}
+
+
+@keyframes animate {
+
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
 
 
 
