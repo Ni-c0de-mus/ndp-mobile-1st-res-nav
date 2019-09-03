@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee|Hind|PT+Sans|Pacifico|Poppins|Lobster|Audiowide|Great+Vibes|Comfortaa|Orbitron|Tajawal|Livvic|Fira+Sans|Unica+One|Rajdhani");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --old-gold: #B8B42D;
+    --olive-drab: #697A21;
+    --wild-blue: #96ADC8;
+    --tea-green: #D7FFAB;
+    --unmellow-yellow: #FCFF6C;
+    --brown-yellow: #D89D6A;
+    --tuscan-red: #6D454C;
+    --spring-bud: #CACF85;
+    --cosmic-latte: #FFFCE8;
+    --mount-pink: #996888;
+    --sapphire-blue: #006BA6;
+    --great-vibes: 'Great Vibes', cursive;
+    --comfortaa: 'Comfortaa', cursive;
+    --orbitron: 'Orbitron', sans-serif;
+    --audiowide: 'Audiowide', cursive;
+    --rajdhani: 'Rajdhani', sans-serif;
+}
+
+html {
+    font-family: var(--rajdhani);
+    font-size: 10px;
+}
+
+
+.main-nav {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--old-gold);
+    display: flex;
+    position: fixed;
+    z-index: -1;
+    top: -100vh;
+    transition: top .5s ease-in-out;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.nav-link {
+    font-size: 3rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--cosmic-latte);
+    letter-spacing: 1.2rem;
+}
+
+.nav-item {
+    margin-bottom: 2rem;
+}
+
+.btn-line {
+    background: var(--tuscan-red);
+    width: 3rem;
+    height: 0.3rem;
+    transition: transform .5s background;
+}
+
+.btn-line:not(:last-child) {
+    margin-bottom: .6rem;
+}
+
+.nav-btn {
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    cursor: pointer;
+}
+
+.checkbox:checked ~ label .btn-line-1 {
+    transform: rotate(-45deg) translate(-6px, 7px);
+}
+
+.checkbox:checked ~ label .btn-line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked ~ label .btn-line-3 {
+    transform: rotate(45deg) translate(-6px, -7px);
+}
+
+.checkbox:checked ~ label .btn-line {
+    background-color: var(--mount-pink);
+}
+
+.checkbox:checked ~ .main-nav {
+    top: 0;
+}
+
+
+
+
